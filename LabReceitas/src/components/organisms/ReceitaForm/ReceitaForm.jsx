@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import './ReceitaForm.css'
+
 import { useCookBContext } from "../../../context/CookBContext";
 
 const ReceitaForm = () => {
@@ -57,7 +59,8 @@ const ReceitaForm = () => {
     };
 
     return (
-        <div className="add-receita">
+        <div className="modal">
+            <div className="modal-content">
             <h2>Adicionar Nova Receita</h2>
             <form onSubmit={handleSubmit}>
                 Título da Receita:
@@ -123,6 +126,8 @@ const ReceitaForm = () => {
                     {selectedReceita ? "Atualizar Receita" : "Adicionar Receita"}
                 </button>
             </form>
+            <button onClick={() => navigate(-1)}> Voltar </button>
+            </div>
         </div>
     );
 };

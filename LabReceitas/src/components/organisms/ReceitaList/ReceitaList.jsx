@@ -1,4 +1,7 @@
 import { useState } from 'react';
+
+import './ReceitaList.css'
+
 import { useCookBContext } from '../../../context/CookBContext';
 import ReceitaItem from '../ReceitaItem/ReceitaItem';
 
@@ -24,8 +27,8 @@ const ReceitaList = () => {
   };
 
   return (
-    <div>
-      <h2>Lista de Receitas</h2>
+    <div className='list'>
+      <h2>LISTA DE RECEITAS</h2>
       <label>
         <input
           type="radio"
@@ -66,9 +69,11 @@ const ReceitaList = () => {
         />
         Sem glúten e sem lactose
       </label>
+      <br />
       <button type="button" onClick={handleFilterClick}>
         Filtrar
       </button>
+      <br />
       {filteredReceitas.length === 0 ? (
         <p>Nenhuma receita encontrada.</p>
       ) : (

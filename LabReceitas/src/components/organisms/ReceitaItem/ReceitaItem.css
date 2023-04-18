@@ -1,0 +1,11 @@
+.receita-item {
+    background-color: #F2CC8F;
+    padding: 20px;
+    width: 200px;
+    margin: 6%;
+}
+
+.item-container {
+    display: inline-flex;
+    justify-content: space-between;
+}
