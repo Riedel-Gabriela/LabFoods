@@ -96,7 +96,7 @@ const ReceitaForm = () => {
                         setFormValues({ ...formValues, restrictions: e.target.value })
                     }
                 />
-                Glúten
+                Sem glúten
                 <br />
                 <input 
                 type="radio" 
@@ -106,7 +106,7 @@ const ReceitaForm = () => {
                     setFormValues({ ...formValues, restrictions: e.target.value })
                 }
                 />
-                Lactose
+                Sem lactose
                 <br />
                 <input 
                 type="radio" 
@@ -116,7 +116,7 @@ const ReceitaForm = () => {
                     setFormValues({ ...formValues, restrictions: e.target.value })
                 }
                 />
-                Glúten e Lactose
+                Sem glúten e sem lactose
                 <br />
 
                 <button type="submit">
