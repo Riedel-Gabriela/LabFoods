@@ -29,6 +29,7 @@ const ReceitaList = () => {
   return (
     <div className='list'>
       <h2>LISTA DE RECEITAS</h2>
+      <div className='filter-container'>
       <label>
         <input
           type="radio"
@@ -69,7 +70,7 @@ const ReceitaList = () => {
         />
         Sem glúten e sem lactose
       </label>
-      <br />
+      </div>
       <button type="button" onClick={handleFilterClick}>
         Filtrar
       </button>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import './App.css'
 import { Header } from './components/molecules'
-import { ReceitaDetails, ReceitaForm, ReceitaList, ReceitaItem } from "./components/organisms"
+import { ReceitaDetails, ReceitaForm, ReceitaList } from "./components/organisms"
 
 function App() {
   return (

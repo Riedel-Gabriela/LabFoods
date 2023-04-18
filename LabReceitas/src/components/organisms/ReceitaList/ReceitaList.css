@@ -1,6 +1,16 @@
 .list {
-    background-color: #E07A5F;
+    background-color: #b36a5e;
     padding: 2%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.filter-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+label {
+    font-size: 22px;
 }

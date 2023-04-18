@@ -1,4 +1,7 @@
 import { useParams } from "react-router-dom";
+
+import './ReceitaDetails.css'
+
 import { useCookBContext } from "../../../context/CookBContext";
 
 const ReceitaDetails = () => {
@@ -6,7 +9,7 @@ const ReceitaDetails = () => {
     const { receitas } = useCookBContext();
     const selectedReceita = receitas.find(receita => receita.id === Number(id))
     return (
-        <div>
+        <div className="receita-details">
             <h2>Detalhes da Receita</h2>
             {selectedReceita ? (
                 <>

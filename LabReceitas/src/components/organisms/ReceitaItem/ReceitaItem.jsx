@@ -19,15 +19,19 @@ const ReceitaItem = ({ receita }) => {
         {receita.restrictions ? (
           <>
             <h4>Não contém:</h4>
-            <p>{receita.restrictions}</p>
+            <p className="restriction-p">{receita.restrictions}</p>
           </>
         ) : (
-          <h4>Esta receita contém glúten e lactose.</h4>
+          <>
+          <h4>ATENÇÃO</h4>
+          <p className="no-restriction-p">Contém glúten e derivados de leite.</p>
+          </>
         )}
-
+        <div className="item-buttons">
         <button onClick={handleDelete}>Excluir</button>
         <button onClick={() => navigate(`/details/${receita.id}`)}>Selecionar</button>
         <button onClick={() => navigate(`/edit/${receita.id}`)}>Editar</button>
+        </div>
       </div>
     </div>
   );

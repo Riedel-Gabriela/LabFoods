@@ -63,7 +63,7 @@ const ReceitaForm = () => {
             <div className="modal-content">
             <h2>Adicionar Nova Receita</h2>
             <form onSubmit={handleSubmit}>
-                Título da Receita:
+                Título da Receita:<br />
                 <input
                     type="text"
                     placeholder="Título"
@@ -73,7 +73,7 @@ const ReceitaForm = () => {
                     }
                 />
                 <br />
-                Ingredientes:
+                Ingredientes:<br />
                 <textarea
                     placeholder="Ingredientes"
                     value={formValues.content}
@@ -82,7 +82,7 @@ const ReceitaForm = () => {
                     }
                 />
                 <br />
-                Preparo:
+                Preparo:<br />
                 <textarea
                     placeholder="Preparo"
                     value={formValues.prepare}
@@ -91,6 +91,7 @@ const ReceitaForm = () => {
                     }
                 />
                 <h3>Restrições</h3>
+                <div className="radio-buttons-form">
                 <input 
                 type="radio" 
                 name="restriction" 
@@ -121,6 +122,7 @@ const ReceitaForm = () => {
                 />
                 Sem glúten e sem lactose
                 <br />
+                </div>
 
                 <button type="submit">
                     {selectedReceita ? "Atualizar Receita" : "Adicionar Receita"}
