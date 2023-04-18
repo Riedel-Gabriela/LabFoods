@@ -15,7 +15,7 @@ export default function Header() {
                 <h2>suas receitas num 'click'</h2>
                 <nav>
                     <button onClick={() => navigate("/")}> Home </button>
-                    <button onClick={() => navigate("/create")}> Criar </button>
+                    <button onClick={() => navigate("/create")}> Nova Receita </button>
                     <button onClick={() => navigate(-1)}> Voltar </button>
                 </nav>
             </div>
