@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import './App.css'
 import { Header } from './components/molecules'
-import { ReceitaDetails, ReceitaForm, ReceitaList } from "./components/organisms"
+import { ReceitaDetails, ReceitaForm, ReceitaList, NotFound } from "./components/organisms"
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path='/create' element={<ReceitaForm />} />
         <Route path='/edit/:id' element={<ReceitaForm />} />
         <Route path='/details/:id' element={<ReceitaDetails />} />
-        {/* <Route path='*' element={<NotFound />} /> */}
+        <Route path='*' element={<NotFound />} />
       </Routes>
 
     </BrowserRouter>
