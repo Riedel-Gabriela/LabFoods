@@ -18,7 +18,8 @@ const ReceitaDetails = () => {
     const preparo = (selectedReceita.prepare)
     const listPreparo = preparo.split(breakpoint);
     return (
-        <div className="receita-details">
+        <div className="modal">
+            <div className="modal-content-detail">
             <h2>Detalhes da Receita</h2>
             {selectedReceita ? (
                 <>
@@ -49,10 +50,13 @@ const ReceitaDetails = () => {
                         <h4>Esta receita não contém glúten nem lactose.</h4>
                     )}
                     <button className="detail-back-button" onClick={() => navigate(`/edit/${selectedReceita.id}`)}>Editar</button>
+                    <button className="detail-back-button" onClick={() => navigate(-1)}>Voltar</button>
+
                 </>
             ) : (
                 <p>Selecione uma receita para visualizar os detalhes.</p>
             )}
+            </div>
         </div>
     );
 };

@@ -11,6 +11,9 @@
     justify-content: space-evenly;
 }
 
-label {
-    font-size: 22px;
+
+.span-list {
+    background-color: #3D405B;
+    padding: 8px;
+    border-radius: 5px;
 }

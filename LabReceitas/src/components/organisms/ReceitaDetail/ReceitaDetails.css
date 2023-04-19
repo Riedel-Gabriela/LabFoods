@@ -15,6 +15,15 @@
 
 .lists-container {
     text-align: left;
-    margin-left: 31rem;
+    margin-left: 40%;
     text-transform: capitalize;
+}
+
+.modal-content-detail {
+    background-color: #81B29A;
+    border-radius: 20px;
+    margin: 5% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
 }

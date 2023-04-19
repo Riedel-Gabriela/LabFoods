@@ -9,78 +9,45 @@ const ReceitaList = () => {
   const { receitas } = useCookBContext();
 
   const [filterValue, setFilterValue] = useState('');
+  let receitaValor = ''
 
   const handleFilterClick = () => {
-    const selectedReceita = receitas.filter((receita) => {   
-      if (filterValue === 'gluten-lactose-free') {
-        return receita.restrictions.includes('Glúten e Lactose') === true;
-      }
-      return receita.restrictions.includes(filterValue) === true;
-    });
-    setFilteredReceitas(selectedReceita);
+    setFilterValue(receitaValor);
   };
 
-  const [filteredReceitas, setFilteredReceitas] = useState(receitas);
-
   const handleFilterChange = (e) => {
-    setFilterValue(e.target.value);
+    receitaValor = e.target.value
   };
 
   return (
     <div className='list'>
       <h2>LISTA DE RECEITAS</h2>
       <div className='filter-container'>
-      <label>
-        <input
-          type="radio"
-          name="restriction"
-          value=""
-          checked={filterValue === ''}
-          onChange={handleFilterChange}
-        />
-        Todas
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="restriction"
-          value="Glúten"
-          checked={filterValue === 'Glúten'}
-          onChange={handleFilterChange}
-        />
-        Sem glúten
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="restriction"
-          value="Lactose"
-          checked={filterValue === 'Lactose'}
-          onChange={handleFilterChange}
-        />
-        Sem lactose
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="restriction"
-          value="gluten-lactose-free"
-          checked={filterValue === 'gluten-lactose-free'}
-          onChange={handleFilterChange}
-        />
-        Sem glúten e sem lactose
-      </label>
+        <label><input name='filter' type='radio' value=' ' onChange={handleFilterChange} />Todas</label><br />
+        <label><input name='filter' type='radio' value='gluten' onChange={handleFilterChange} />Sem Glúten</label><br />
+        <label><input name='filter' type='radio' value='lactose' onChange={handleFilterChange} />Sem Lactose</label><br />
+        <label><input name='filter' type='radio' value='gluten-lactose' onChange={handleFilterChange} />Sem Glúten e Sem Lactose</label><br />
       </div>
-      <button type="button" onClick={handleFilterClick}>
-        Filtrar
-      </button>
+      <button type='button' onClick={handleFilterClick}>Filtrar</button>
       <br />
-      {filteredReceitas.length === 0 ? (
-        <p>Nenhuma receita encontrada.</p>
+      {receitas.length === 0 ? (
+        <p>Sem receitas no seu caderno! Adicione uma receita no botão <span className='span-list'>Nova Receita</span> no início da página.</p>
       ) : (
-        filteredReceitas.map((receita) => (
+        receitas
+          .filter((receita) => {
+            if (filterValue === 'gluten-lactose') {
+              return receita.restrictions.includes('Glúten e Lactose') === true;
+            } else if (filterValue === 'gluten') {
+              return receita.restrictions.includes('Glúten') === true;
+            } else if (filterValue === 'lactose') {
+              return receita.restrictions.includes('Lactose') === true;
+            } else if (filterValue === ' ') {
+              return receitas
+            }
+          })
+          .map((receita) => (
           <ReceitaItem key={receita.id} receita={receita} />
-        ))
+          ))
       )}
     </div>
   );
