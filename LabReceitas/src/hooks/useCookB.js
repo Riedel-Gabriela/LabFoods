@@ -33,6 +33,7 @@ const useCookB = () => {
       const result = receitas.map((receita) => (receita.id === id ? updatedReceita : receita))
       setReceitas(result);
     };
+    
     return {
         addReceita,
         selectedReceita,

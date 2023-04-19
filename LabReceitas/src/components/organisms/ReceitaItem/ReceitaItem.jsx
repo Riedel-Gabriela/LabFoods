@@ -6,10 +6,11 @@ import { useCookBContext } from "../../../context/CookBContext";
 
 const ReceitaItem = ({ receita }) => {
   const navigate = useNavigate()
-  const { deleteReceita, setSelectedReceita, handleReceitaSelect } = useCookBContext()
+  const { deleteReceita, setSelectedReceita } = useCookBContext()
   const handleDelete = () => {
     deleteReceita(receita.id);
     setSelectedReceita(null);
+    
   };
 
   return (

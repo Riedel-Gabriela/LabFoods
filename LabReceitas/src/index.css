@@ -4,7 +4,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #F4F1DE;
 
   font-synthesis: none;
@@ -36,9 +35,10 @@ h1 {
   line-height: 1.1;
 }
 
-input {
+input, textarea {
   padding: 20px;
   margin: 5px;
+  color: #213547;
 }
 
 button {
