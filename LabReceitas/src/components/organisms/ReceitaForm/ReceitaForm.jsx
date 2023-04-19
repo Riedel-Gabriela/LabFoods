@@ -60,12 +60,12 @@ const ReceitaForm = () => {
     return (
         <div className="modal">
             <div className="modal-content">
-            <h2>Adicionar Nova Receita</h2>
+            <h2>Nova Receita</h2>
             <form onSubmit={handleSubmit}>
                 Título da Receita:<br />
                 <input
                     type="text"
-                    placeholder="Título"
+                    placeholder="ex: bolo de chocolate da vó"
                     value={formValues.title}
                     onChange={(e) =>
                         setFormValues({ ...formValues, title: e.target.value })
@@ -74,7 +74,7 @@ const ReceitaForm = () => {
                 <br />
                 Ingredientes:<br />
                 <textarea
-                    placeholder="Ingredientes"
+                    placeholder="ex: 1 xc de trigo, 2 ovos (...)"
                     value={formValues.content}
                     onChange={(e) =>
                         setFormValues({ ...formValues, content: e.target.value })
@@ -83,13 +83,14 @@ const ReceitaForm = () => {
                 <br />
                 Preparo:<br />
                 <textarea
-                    placeholder="Preparo"
+                    placeholder="ex: coloque os ingredientes secos, misture com os ovos"
                     value={formValues.prepare}
                     onChange={(e) =>
                         setFormValues({ ...formValues, prepare: e.target.value })
                     }
                 />
                 <h3>Restrições</h3>
+                <p>Se você não adicionar restrições, não tem problema!<br />Será uma receita com glúten e lactose.</p>
                 <div className="radio-buttons-form">
                 <input 
                 type="radio" 
