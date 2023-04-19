@@ -6,11 +6,15 @@ import { useCookBContext } from "../../../context/CookBContext";
 
 const ReceitaItem = ({ receita }) => {
   const navigate = useNavigate()
+
   const { deleteReceita, setSelectedReceita } = useCookBContext()
+
   const handleDelete = () => {
-    deleteReceita(receita.id);
-    setSelectedReceita(null);
-    
+    const confirmDelete = window.confirm("Você tem certeza que quer deletar essa receita?");
+    if (confirmDelete) {
+      deleteReceita(receita.id);
+      setSelectedReceita(null);
+    }
   };
 
   return (
@@ -24,14 +28,14 @@ const ReceitaItem = ({ receita }) => {
           </>
         ) : (
           <>
-          <h4>ATENÇÃO</h4>
-          <p className="no-restriction-p">Contém glúten e derivados de leite.</p>
+            <h4>ATENÇÃO</h4>
+            <p className="no-restriction-p">Contém glúten e derivados de leite.</p>
           </>
         )}
         <div className="item-buttons">
-        <button onClick={handleDelete}>Excluir</button>
-        <button onClick={() => navigate(`/details/${receita.id}`)}>Selecionar</button>
-        <button onClick={() => navigate(`/edit/${receita.id}`)}>Editar</button>
+          <button onClick={handleDelete}>Excluir</button>
+          <button onClick={() => navigate(`/details/${receita.id}`)}>Selecionar</button>
+          <button onClick={() => navigate(`/edit/${receita.id}`)}>Editar</button>
         </div>
       </div>
     </div>

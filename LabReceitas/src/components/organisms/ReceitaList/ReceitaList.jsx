@@ -44,6 +44,7 @@ const ReceitaList = () => {
             } else if (filterValue === ' ') {
               return receitas
             }
+            return receitas
           })
           .map((receita) => (
           <ReceitaItem key={receita.id} receita={receita} />
