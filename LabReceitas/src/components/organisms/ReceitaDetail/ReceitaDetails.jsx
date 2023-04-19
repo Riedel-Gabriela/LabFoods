@@ -42,7 +42,7 @@ const ReceitaDetails = () => {
                     </div>
                     {selectedReceita.restrictions ? (
                         <>
-                            <h4>Contém:</h4>
+                            <h4>NÃO CONTÉM</h4>
                             <p>{selectedReceita.restrictions}</p>
                         </>
                     ) : (
