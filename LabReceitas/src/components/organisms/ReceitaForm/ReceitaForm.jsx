@@ -57,7 +57,6 @@ const ReceitaForm = () => {
         });
         navigate('/')
     };
-
     return (
         <div className="modal">
             <div className="modal-content">

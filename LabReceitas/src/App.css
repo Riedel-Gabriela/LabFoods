@@ -6,6 +6,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  
+.lists-container {
+  text-align: left;
+  margin-left: 30rem;
+  text-transform: capitalize;
+}
 }
 
 .card {
@@ -15,3 +21,4 @@
 .read-the-docs {
   color: #888;
 }
+

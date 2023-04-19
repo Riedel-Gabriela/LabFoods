@@ -4,3 +4,17 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+.detail-back-button {
+    background-color: #3D405B;
+}
+
+.details-title {
+    text-transform: uppercase;
+}
+
+.lists-container {
+    text-align: left;
+    margin-left: 31rem;
+    text-transform: capitalize;
+}
