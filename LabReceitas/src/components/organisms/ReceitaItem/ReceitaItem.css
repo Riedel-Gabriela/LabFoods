@@ -1,37 +1,99 @@
+/* Base styles for all devices */
 .receita-item {
     background-color: #3D405B;
-    padding: 20px;
-    width: 300px;
+    padding: 5%;
     height: 350px;
     margin: 5%;
     border-radius: 5px;
-
 }
 .receita-item > h3 {
     text-transform: capitalize;
 }
 
 .item-container {
-    display: inline-flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .restriction-p {
-    background-color: #E07A5F;
+    background-color: #0077b6;
+    margin: 10%;
     padding: 10px;
-    width: auto;
     border-radius: 5px;
     text-transform: uppercase;
 }
 
 .no-restriction-p {
-    background-color: #E07A5F;
-    padding: 5px;
-    width: auto;
-    border-radius: 10px;
+    background-color: #e63946;
+    margin: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
 .item-buttons {
     display: flex;
     flex-direction: column;
+}
+
+/* Media query for devices with a minimum width of 390px */
+@media (min-width: 390px) {
+    .receita-item {
+        width: 80%;
+        height: 350px;
+    }
+    .restriction-p {
+        width: 72%;
+    }
+    .no-restriction-p {
+        width: 72%;
+    }
+}
+
+/* Media query for devices with a minimum width of 640px */
+@media (min-width: 640px) {
+    .item-container {
+        margin-top: 2%;
+        width: 100%;
+        flex-direction: row;
+        align-content: space-around;
+    }
+    .receita-item {
+        width: 35%;
+        height: 350px;
+    }
+    .restriction-p {
+        width: 72%;
+    }
+    .no-restriction-p {
+        width: 72%;
+    }
+}
+
+/* Media query for devices with a minimum width of 768px */
+@media (min-width: 768px) {
+    .item-container {
+        margin-top: 2%;
+        width: 50%;
+        flex-direction: row;
+        align-content: space-around;
+    }
+    .receita-item {
+        width: 75%;
+        height: 350px;
+    }
+    .restriction-p {
+        width: 72%;
+    }
+    .no-restriction-p {
+        width: 72%;
+    }
+}
+
+/* Media query for devices with a minimum width of 1024px */
+@media (min-width: 1024px) {
+    .receita-item {
+        width: 40%;
+        height: 350px;
+    }
 }

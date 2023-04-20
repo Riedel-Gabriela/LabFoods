@@ -1,19 +1,67 @@
+/* Base styles for all devices */
 .list {
     background-color: #b36a5e;
     padding: 2%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-
 .filter-container {
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
+    padding: 10%;
+    line-height: 35px;
 }
-
-
+.item-grid {
+    display: flex;
+    flex-direction: column;
+}
 .span-list {
     background-color: #3D405B;
     padding: 8px;
     border-radius: 5px;
+}
+/* Media query for devices with a minimum width of 390px */
+@media (min-width: 390px) {
+    .filter-container {
+        text-align: left;
+        margin-top: -10%;
+    }
+    .item-grid {
+        justify-content: space-evenly;
+    }
+}
+
+/* Media query for devices with a minimum width of 640px */
+@media (min-width: 640px) {
+    .filter-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 5% 0% 5% 0;
+        margin-top: -5%;
+    }
+    .item-grid {
+        justify-content: space-evenly;
+    }
+}
+
+/* Media query for devices with a minimum width of 768px */
+@media (min-width: 768px) {
+    .item-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+}
+
+/* Media query for devices with a minimum width of 1024px */
+@media (min-width: 1024px) {
+    .filter-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 5% 0% 5% 0;
+        margin-top: -5%;
+    }
+    .item-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }

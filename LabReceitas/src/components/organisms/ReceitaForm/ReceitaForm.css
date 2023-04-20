@@ -1,4 +1,4 @@
-/* The Modal (background) */
+/* Base styles for all devices */
 .modal {
     position: fixed;
     z-index: 1;
@@ -11,7 +11,6 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content/Box */
 .modal-content {
     background-color: #3D405B;
     border-radius: 20px;
@@ -22,7 +21,6 @@
 }
 
 input[type=text], textarea {
-    width: 30%;
     font-family: Arial;
     background-color: #F4F1DE;
     padding: 12px 20px;
@@ -34,7 +32,38 @@ input[type=text], textarea {
 }
 
 .radio-buttons-form {
-    margin-left: 42%;
     text-align: justify;
     padding-bottom: 20px;
+}
+
+/* Media query for devices with a minimum width of 390px */
+@media (min-width: 390px) {
+    input[type=text], textarea {
+        width: 80%;
+    }
+    .radio-buttons-form {
+        margin-left: 10%;
+    }
+}
+
+/* Media query for devices with a minimum width of 640px */
+@media (min-width: 640px) {
+    .radio-buttons-form {
+        margin-left: 30%;
+    }
+}
+
+/* Media query for devices with a minimum width of 768px */
+@media (min-width: 768px) {
+    
+}
+
+/* Media query for devices with a minimum width of 1024px */
+@media (min-width: 1024px) {
+    input[type=text], textarea {
+        width: 50%;
+    }
+    .radio-buttons-form {
+        margin-left: 36%;
+    }
 }

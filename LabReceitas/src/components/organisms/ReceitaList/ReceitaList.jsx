@@ -30,6 +30,7 @@ const ReceitaList = () => {
       </div>
       <button type='button' onClick={handleFilterClick}>Filtrar</button>
       <br />
+      <div className='item-grid'>
       {receitas.length === 0 ? (
         <p>Sem receitas no seu caderno! Adicione uma receita no botão <span className='span-list'>Nova Receita</span> no início da página.</p>
       ) : (
@@ -50,6 +51,7 @@ const ReceitaList = () => {
           <ReceitaItem key={receita.id} receita={receita} />
           ))
       )}
+      </div>
     </div>
   );
 };

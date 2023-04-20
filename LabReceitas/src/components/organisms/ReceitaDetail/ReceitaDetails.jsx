@@ -51,7 +51,6 @@ const ReceitaDetails = () => {
                     )}
                     <button className="detail-back-button" onClick={() => navigate(`/edit/${selectedReceita.id}`)}>Editar</button>
                     <button className="detail-back-button" onClick={() => navigate(-1)}>Voltar</button>
-
                 </>
             ) : (
                 <p>Selecione uma receita para visualizar os detalhes.</p>

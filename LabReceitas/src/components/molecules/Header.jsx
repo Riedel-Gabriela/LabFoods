@@ -8,7 +8,6 @@ export default function Header() {
     const navigate = useNavigate();
     return (
         <header>
-
             <img src={logo} alt="Logo" className="logo-header" />
             <div className="header-bloco">
                 <h1>The CookBook</h1>

@@ -1,3 +1,4 @@
+/* Base styles for all devices */
 header {
     background-color: #3D405B;
     padding: 2%;
@@ -5,9 +6,74 @@ header {
     border-top-left-radius: 20px;
 }
 
-.logo-header {
-    width: 375px;
-    position: absolute;
-    margin-left: -600px;
-    margin-top: -40px;
+/* Media query for devices with a minimum width of 390px */
+@media (min-width: 390px) {
+    .logo-header {
+        position: relative;
+        width: 50%;
+        margin-top: -3%;
+    }
+    .header-bloco > h1 {
+        font-size: 2rem;
+    }
+    .header-bloco > h2 {
+        font-size: 1rem;
+    }
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav > button {
+        padding: 4%;
+    } 
+    
+}
+
+/* Media query for devices with a minimum width of 640px */
+@media (min-width: 640px) {
+    .logo-header {
+        position: relative;
+        width: 38%;
+        margin-top: -3%;
+    }
+    .header-bloco {
+        margin-top: -2%;
+    }
+}
+
+/* Media query for devices with a minimum width of 768px */
+@media (min-width: 768px) {
+    .logo-header {
+        position: relative;
+        width: 38%;
+        margin-top: -3%;
+    }
+    .header-bloco {
+        margin-top: -8%;
+    }
+}
+
+/* Media query for devices with a minimum width of 1024px */
+@media (min-width: 1024px) {
+    .logo-header {
+        position: relative;
+        width: 30%;
+    }
+    .header-bloco {
+        margin-top: -5%;
+    }
+    .header-bloco > h1 {
+        font-size: 3rem;
+    }
+    .header-bloco > h2 {
+        font-size: 2rem;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    nav > button {
+        margin: 2%;
+        padding: 2%;
+    } 
 }

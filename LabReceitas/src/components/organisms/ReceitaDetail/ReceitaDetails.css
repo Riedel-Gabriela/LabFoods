@@ -1,24 +1,20 @@
+/* Base styles for all devices */
+.detail-back-button {
+    background-color: #3D405B;
+}
+.details-title {
+    text-transform: uppercase;
+}
 .receita-details {
     background-color: #81B29A;
     padding: 2%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-
-.detail-back-button {
-    background-color: #3D405B;
-}
-
-.details-title {
-    text-transform: uppercase;
-}
-
 .lists-container {
     text-align: left;
-    margin-left: 40%;
     text-transform: capitalize;
 }
-
 .modal-content-detail {
     background-color: #81B29A;
     border-radius: 20px;
@@ -26,4 +22,32 @@
     padding: 10px;
     border: 1px solid #888;
     width: 68%;
+}
+
+/* Media query for devices with a minimum width of 390px */
+@media (min-width: 390px) {
+    .lists-container {
+        margin-left: 10%;
+    }
+}
+
+/* Media query for devices with a minimum width of 640px */
+@media (min-width: 640px) {
+    .lists-container {
+        margin-left: 20%;
+    }
+}
+
+/* Media query for devices with a minimum width of 768px */
+@media (min-width: 768px) {
+    .lists-container {
+        margin-left: 20%;
+    }
+}
+
+/* Media query for devices with a minimum width of 1024px */
+@media (min-width: 1024px) {
+    .lists-container {
+        margin-left: 40%;
+    }
 }
