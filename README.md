@@ -3,7 +3,7 @@
 
 <img src="imagem1-readme.png" alt="imagem 1">
 
-> Olá! Bem vindo ao repositório do projeto LabFood. Este repositório é referente ao projeto final do curso FuturoDEV do SENAI-SC em parceria com a Prefeitura de Florianópolis. É a criação de um front-end de um sistema decaderno de receitas pessoal na linguagem Javascript, desenvolvido com a biblioteca React + Vite e utilizando localstorage como .
+> Olá! Bem vindo ao repositório do projeto LabFood. Este repositório é referente ao projeto final do curso FuturoDEV do SENAI-SC em parceria com a Prefeitura de Florianópolis. É a criação de um front-end de um sistema que reproduz um caderno de receitas pessoal feito na linguagem Javascript, desenvolvido com a biblioteca React + Vite e utilizando localstorage como banco de dados.
 
 ## 💻 Pré-requisitos
 
